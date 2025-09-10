@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>Schnitzeljagd - Frage 1</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 100px;
+    }
+    input {
+      padding: 10px;
+      font-size: 16px;
+    }
+    button {
+      padding: 10px 15px;
+      font-size: 16px;
+      margin-left: 10px;
+      cursor: pointer;
+    }
+    #result {
+      margin-top: 20px;
+      font-weight: bold;
+      font-size: 18px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Frage 1</h1>
+  <p>In welcher Season wurde der Battle Pass das erste Mal eingeführt?</p>
+  
+  <!-- Eingabefeld und Button -->
+  <input type="text" id="answer" placeholder="Antwort eingeben">
+  <button onclick="checkAnswer()">Überprüfen</button>
+  
+  <!-- Hier erscheint das Ergebnis -->
+  <div id="result"></div>
+  
+  <script>
+    function checkAnswer() {
+      let answer = document.getElementById("answer").value.trim().toLowerCase();
+      
+      if (answer === "Season 2" || answer === "Season zwei") {
+        document.getElementById("result").innerHTML = 
+          "✅ Richtig! Nächster Ort: <b>Rotes Fruchtgemüse</b>";
+      } else {
+        document.getElementById("result").innerHTML = "❌ Falsch, versuch es nochmal!";
+      }
+    }
+  </script>
+</body>
+</html>
